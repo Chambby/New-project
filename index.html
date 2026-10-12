@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PLAYSTATE — Your Gaming Hub</title>
+    <meta name="description" content="Discover games and explore new releases on PLAYSTATE.">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">PLAYSTATE<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#arcade">Mini-games</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <a href="#arcade" class="nav-button">Play now ↗</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+
+            <div class="hero-content">
+                <p class="eyebrow">YOUR NEXT OBSESSION STARTS HERE</p>
+
+                <h1>
+                    FIND YOUR<br>
+                    NEXT <span>GAME.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover new worlds, find your next favorite game,
+                    and take a break with our collection of mini-games.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#games" class="button button-primary">
+                        Explore games →
+                    </a>
+
+                    <a href="#arcade" class="button button-secondary">
+                        Play mini-games
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-feature">
+                <p class="eyebrow">FEATURED GAME</p>
+
+                <div class="featured-placeholder">
+                    <!-- Add a featured game image here -->
+                    <span>GAME ART</span>
+                </div>
+
+                <h2>Discover something new.</h2>
+                <p>Your next adventure is waiting.</p>
+            </div>
+
+        </section>
+
+
+        <!-- Game Library -->
+        <section id="games" class="section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE LIBRARY</p>
+                    <h2>Find your game.</h2>
+                </div>
+
+                <a href="#games" class="text-link">Explore library ↗</a>
+            </div>
+
+            <!-- Search and category filters -->
+            <div class="game-filters">
+                <label for="game-search">Search games</label>
+                <input
+                    type="search"
+                    id="game-search"
+                    placeholder="Search for a game..."
+                >
+
+                <label for="genre-filter">Genre</label>
+                <select id="genre-filter">
+                    <option value="all">All genres</option>
+                    <option value="action">Action</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="indie">Indie</option>
+                    <option value="survival">Survival</option>
+                    <option value="strategy">Strategy</option>
+                </select>
+            </div>
+
+            <div class="game-grid">
+
+                <article class="game-card" data-genre="survival">
+                    <div class="game-image minecraft-image">
+                        <span>GAME IMAGE</span>
+                    </div>
+                    <div class="game-info">
+                        <p class="game-category">SURVIVAL · SANDBOX</p>
+                        <h3>Minecraft</h3>
+                        <p>Build, explore, and survive in a world of your own.</p>
+                        <a href="https://www.minecraft.net/" target="_blank"
+                           rel="noopener noreferrer">Discover game ↗</a>
+                    </div>
+                </article>
+
+                <article class="game-card" data-genre="action">
+                    <div class="game-image">
+                        <span>GAME IMAGE</span>
+                    </div>
+                    <div class="game-info">
+                        <p class="game-category">ACTION · BATTLE ROYALE</p>
+                        <h3>Fortnite</h3>
+                        <p>Compete, build, and fight to be the last player standing.</p>
+                        <a href="https://www.fortnite.com/" target="_blank"
+                           rel="noopener noreferrer">Discover game ↗</a>
+                    </div>
+                </article>
+
+                <article class="game-card" data-genre="adventure">
+                    <div class="game-image">
+                        <span>GAME IMAGE</span>
+                    </div>
+                    <div class="game-info">
+                        <p class="game-category">ADVENTURE · SANDBOX</p>
+                        <h3>Roblox</h3>
+                        <p>Explore experiences and discover games created by others.</p>
+                        <a href="https://www.roblox.com/" target="_blank"
+                           rel="noopener noreferrer">Discover game ↗</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- Mini-games Arcade -->
+        <section id="arcade" class="section arcade-section">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE ARCADE</p>
+                    <h2>Small games. Big challenges.</h2>
+                    <p>Quick games for when you need a break.</p>
+                </div>
+            </div>
+
+            <div class="minigame-grid">
+
+                <article class="minigame-card">
+                    <div class="minigame-icon">⏱</div>
+
+                    <p class="game-category">SURVIVAL · 60 SECONDS</p>
+                    <h3>Survive for 60 Seconds</h3>
+
+                    <p>
+                        Dodge obstacles, stay alive, and see if you can
+                        survive the full minute.
+                    </p>
+
+                    <a href="survive.html" class="button button-primary">
+                        Play game →
+                    </a>
+                </article>
+
+                <article class="minigame-card">
+                    <div class="minigame-icon">🧠</div>
+
+                    <p class="game-category">PUZZLE · MEMORY</p>
+                    <h3>Memory Match</h3>
+
+                    <p>
+                        Find matching pairs and test how good your memory
+                        really is.
+                    </p>
+
+                    <a href="memory.html" class="button button-secondary">
+                        Coming soon
+                    </a>
+                </article>
+
+                <article class="minigame-card">
+                    <div class="minigame-icon">🪙</div>
+
+                    <p class="game-category">ARCADE · HIGH SCORE</p>
+                    <h3>Coin Rush</h3>
+
+                    <p>
+                        Collect coins, avoid traps, and try to beat your
+                        personal best.
+                    </p>
+
+                    <a href="coin-rush.html" class="button button-secondary">
+                        Coming soon
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section id="about" class="section about-section">
+
+            <p class="eyebrow">ABOUT PLAYSTATE</p>
+
+            <h2>Made for people who love games.</h2>
+
+            <p>
+                PLAYSTATE is a gaming website built to help players
+                discover games, explore different genres, and enjoy
+                original mini-games in one place.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="#home" class="logo">PLAYSTATE<span>.</span></a>
+
+        <p>A gaming project made for fun.</p>
+
+        <p>&copy; 2026 PLAYSTATE. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
