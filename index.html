@@ -4,241 +4,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PLAYSTATE — Your Gaming Hub</title>
-    <meta name="description" content="Discover games and explore new releases on PLAYSTATE.">
-
+    <title>PLAYSTATE - Your Gaming Hub</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <header>
+    <!-- NAVIGATION -->
+    <header class="site-header">
         <nav class="navbar">
             <a href="#home" class="logo">PLAYSTATE<span>.</span></a>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#games">Games</a></li>
+                <li><a href="#journal">Journal</a></li>
                 <li><a href="#arcade">Mini-games</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
 
-            <a href="#arcade" class="nav-button">Play now ↗</a>
+            <a href="#arcade" class="nav-button">Play now</a>
         </nav>
     </header>
 
-
     <main>
 
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-
+        <!-- HOMEPAGE -->
+        <section id="home" class="hero section-container">
             <div class="hero-content">
-                
+                <p class="eyebrow">YOUR NEXT OBSESSION STARTS HERE</p>
+                <h1>FIND YOUR<br>NEXT <span>GAME.</span></h1>
 
-            
                 <p class="hero-description">
                     Discover new worlds, find your next favorite game,
-                    and take a break with our collection of mini-games.
+                    read about gaming, and play mini-games.
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="#games" class="button button-primary">
-                        Explore games →
-                    </a>
-
-                    <a href="#arcade" class="button button-secondary">
-                        Play mini-games
-                    </a>
+                    <a href="#games" class="button button-primary">Explore games</a>
+                    <a href="#arcade" class="button button-secondary">Play mini-games</a>
                 </div>
             </div>
 
             <div class="hero-feature">
-                <p class="eyebrow">FEATURED GAME</p>
-
-                <div class="featured-placeholder">
-                    <!-- Add a featured game image here -->
-                    <span>GAME ART</span>
+                <p class="eyebrow">WELCOME TO PLAYSTATE</p>
+                <div class="featured-art">
+                    <span class="featured-symbol">P.</span>
+                    <span class="featured-caption">DISCOVER YOUR NEXT ADVENTURE</span>
                 </div>
-
-                <h2>Discover something new.</h2>
-                <p>Your next adventure is waiting.</p>
+                <h2>One place. Endless games.</h2>
+                <p>Explore games, discover stories, and challenge yourself.</p>
             </div>
-
         </section>
 
-
-        <!-- Game Library -->
-        <section id="games" class="section">
-
+        <!-- GAME LIBRARY -->
+        <section id="games" class="section-container content-section">
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">THE LIBRARY</p>
                     <h2>Find your game.</h2>
+                    <p class="section-description">From massive adventures to creative worlds.</p>
                 </div>
-
-                <a href="#games" class="text-link">Explore library ↗</a>
             </div>
 
-            <!-- Search and category filters -->
             <div class="game-filters">
-                <label for="game-search">Search games</label>
-                <input
-                    type="search"
-                    id="game-search"
-                    placeholder="Search for a game..."
-                >
+                <div class="filter-field">
+                    <label for="game-search">Search games</label>
+                    <input type="search" id="game-search" placeholder="Search for a game...">
+                </div>
 
-                <label for="genre-filter">Genre</label>
-                <select id="genre-filter">
-                    <option value="all">All genres</option>
-                    <option value="action">Action</option>
-                    <option value="adventure">Action RPG</option>
-                    <option value="indie">Indie</option>
-                    <option value="survival">Survival</option>
-                    <option value="strategy">RPG</option>
-                </select>
+                <div class="filter-field">
+                    <label for="genre-filter">Filter by genre</label>
+                    <select id="genre-filter">
+                        <option value="all">All genres</option>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="indie">Indie</option>
+                        <option value="survival">Survival</option>
+                    </select>
+                </div>
             </div>
 
             <div class="game-grid">
-
                 <article class="game-card" data-genre="survival">
-                    <div class="game-image minecraft-image">
-                        <span>GAME IMAGE</span>
+                    <div class="game-image game-minecraft">
+                        <span class="image-label">SURVIVAL</span>
                     </div>
                     <div class="game-info">
                         <p class="game-category">SURVIVAL · SANDBOX</p>
                         <h3>Minecraft</h3>
                         <p>Build, explore, and survive in a world of your own.</p>
-                        <a href="https://www.minecraft.net/" target="_blank"
-                           rel="noopener noreferrer">Discover game ↗</a>
+                        <a href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer" class="text-link">Discover game ↗</a>
                     </div>
                 </article>
 
                 <article class="game-card" data-genre="action">
-                    <div class="game-image">
-                        <span>GAME IMAGE</span>
+                    <div class="game-image game-fortnite">
+                        <span class="image-label">ACTION</span>
                     </div>
                     <div class="game-info">
                         <p class="game-category">ACTION · BATTLE ROYALE</p>
                         <h3>Fortnite</h3>
-                        <p>Compete, build, and fight to be the last player standing.</p>
-                        <a href="https://www.fortnite.com/" target="_blank"
-                           rel="noopener noreferrer">Discover game ↗</a>
+                        <p>Compete, explore, and play in a constantly evolving world.</p>
+                        <a href="https://www.fortnite.com/" target="_blank" rel="noopener noreferrer" class="text-link">Discover game ↗</a>
                     </div>
                 </article>
 
                 <article class="game-card" data-genre="adventure">
-                    <div class="game-image">
-                        <span>GAME IMAGE</span>
+                    <div class="game-image game-roblox">
+                        <span class="image-label">ADVENTURE</span>
                     </div>
                     <div class="game-info">
-                        <p class="game-category">ADVENTURE · SANDBOX</p>
+                        <p class="game-category">CREATION · MULTIPLAYER</p>
                         <h3>Roblox</h3>
-                        <p>Explore experiences and discover games created by others.</p>
-                        <a href="https://www.roblox.com/" target="_blank"
-                           rel="noopener noreferrer">Discover game ↗</a>
+                        <p>Explore experiences and discover games created by other players.</p>
+                        <a href="https://www.roblox.com/" target="_blank" rel="noopener noreferrer" class="text-link">Discover game ↗</a>
                     </div>
                 </article>
-
             </div>
         </section>
 
+        <!-- CHECKPOINT GAMING JOURNAL -->
+        <section id="journal" class="journal-section">
+            <div class="section-container">
 
-        <!-- Mini-games Arcade -->
-        <section id="arcade" class="section arcade-section">
+                <div class="journal-header">
+                    <div>
+                        <p class="eyebrow">THE PLAYSTATE JOURNAL</p>
+                        <h2>CHECKPOINT<span>.</span></h2>
+                        <p class="section-description">Stories, discoveries, and everything gaming.</p>
+                    </div>
+                    <div class="journal-mark">C.</div>
+                </div>
 
+                <!-- FEATURED ARTICLE -->
+                <article class="journal-featured">
+                    <div class="featured-article-art">
+                        <span class="art-small-label">FEATURED STORY</span>
+                        <span class="art-big-letter">01</span>
+                        <span class="art-bottom-label">GAME DISCOVERY</span>
+                    </div>
+                    <div class="featured-article-content">
+                        <p class="game-category">GAME DISCOVERY · 3 MIN READ</p>
+                        <h3>5 Indie Games Worth Discovering</h3>
+                        <p>Indie games prove that you don't need a huge studio to create something unforgettable. Discover creative worlds, memorable stories, and unique gameplay experiences.</p>
+                        <a href="#article-1" class="text-link">Read article ↓</a>
+                    </div>
+                </article>
+
+                <div class="journal-grid">
+
+                    <!-- ARTICLE 1 -->
+                    <article id="article-1" class="journal-card">
+                        <div class="article-art article-art-purple"><span>01 / DISCOVER</span></div>
+                        <div class="journal-card-content">
+                            <p class="game-category">GAME DISCOVERY · 3 MIN</p>
+                            <h3>5 Indie Games Worth Discovering</h3>
+                            <p>Games like Stardew Valley, Celeste, and Hollow Knight show how smaller studios can create unforgettable experiences.</p>
+                            <p class="article-note">Sometimes, the best adventures come from the smallest studios.</p>
+                            <a href="#article-1" class="text-link">Read article ↗</a>
+                        </div>
+                    </article>
+
+                    <!-- ARTICLE 2 -->
+                    <article id="article-2" class="journal-card">
+                        <div class="article-art article-art-blue"><span>02 / HISTORY</span></div>
+                        <div class="journal-card-content">
+                            <p class="game-category">GAMING HISTORY · 2 MIN</p>
+                            <h3>From Arcade Machines to Modern Gaming</h3>
+                            <p>Gaming has evolved from arcade machines and early consoles to massive online worlds and realistic virtual experiences.</p>
+                            <p class="article-note">The technology changes, but the fun remains.</p>
+                            <a href="#article-2" class="text-link">Read article ↗</a>
+                        </div>
+                    </article>
+
+                    <!-- ARTICLE 3 -->
+                    <article id="article-3" class="journal-card">
+                        <div class="article-art article-art-green"><span>03 / RELAX</span></div>
+                        <div class="journal-card-content">
+                            <p class="game-category">GENRE SPOTLIGHT · 2 MIN</p>
+                            <h3>Why Are Cozy Games So Popular?</h3>
+                            <p>Farming, decorating, and exploring peaceful worlds offer a relaxing alternative to competitive games.</p>
+                            <p class="article-note">Sometimes, watering virtual plants is the perfect adventure.</p>
+                            <a href="#article-3" class="text-link">Read article ↗</a>
+                        </div>
+                    </article>
+
+                    <!-- ARTICLE 4 -->
+                    <article id="article-4" class="journal-card">
+                        <div class="article-art article-art-orange"><span>04 / COMMUNITY</span></div>
+                        <div class="journal-card-content">
+                            <p class="game-category">GAMING CULTURE · 3 MIN</p>
+                            <h3>How Video Games Bring People Together</h3>
+                            <p>Multiplayer games help friends cooperate, compete, and create memories, even when they live far apart.</p>
+                            <p class="article-note">Sometimes, the best part is who you play with.</p>
+                            <a href="#article-4" class="text-link">Read article ↗</a>
+                        </div>
+                    </article>
+
+                    <!-- ARTICLE 5 -->
+                    <article id="article-5" class="journal-card">
+                        <div class="article-art article-art-pink"><span>05 / DEVELOPMENT</span></div>
+                        <div class="journal-card-content">
+                            <p class="game-category">BEHIND THE SCENES · 3 MIN</p>
+                            <h3>How Are Video Games Actually Made?</h3>
+                            <p>Game development combines coding, art, music, storytelling, and lots of testing to bring virtual worlds to life.</p>
+                            <p class="article-note">Every game starts with an idea and a lot of testing.</p>
+                            <a href="#article-5" class="text-link">Read article ↗</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MINI-GAMES -->
+        <section id="arcade" class="section-container content-section arcade-section">
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">THE ARCADE</p>
                     <h2>Small games. Big challenges.</h2>
-                    <p>Quick games for when you need a break.</p>
+                    <p class="section-description">Quick games for when you need a break.</p>
                 </div>
             </div>
 
             <div class="minigame-grid">
-
                 <article class="minigame-card">
-                    <div class="minigame-icon">⏱</div>
-
+                    <div class="minigame-icon">01</div>
                     <p class="game-category">SURVIVAL · 60 SECONDS</p>
                     <h3>Survive for 60 Seconds</h3>
-
-                    <p>
-                        Dodge obstacles, stay alive, and see if you can
-                        survive the full minute.
-                    </p>
-
-                    <a href="survive.html" class="button button-primary">
-                        Play game →
-                    </a>
+                    <p>Dodge obstacles, stay alive, and see if you can survive the full minute.</p>
+                    <a href="survive.html" class="button button-primary">Play game →</a>
                 </article>
 
                 <article class="minigame-card">
-                    <div class="minigame-icon">🧠</div>
-
+                    <div class="minigame-icon">02</div>
                     <p class="game-category">PUZZLE · MEMORY</p>
                     <h3>Memory Match</h3>
-
-                    <p>
-                        Find matching pairs and test how good your memory
-                        really is.
-                    </p>
-
-                    <a href="memory.html" class="button button-secondary">
-                        Coming soon
-                    </a>
+                    <p>Find matching pairs and test how good your memory really is.</p>
+                    <span class="coming-soon">COMING SOON</span>
                 </article>
 
                 <article class="minigame-card">
-                    <div class="minigame-icon">🪙</div>
-
+                    <div class="minigame-icon">03</div>
                     <p class="game-category">ARCADE · HIGH SCORE</p>
                     <h3>Coin Rush</h3>
-
-                    <p>
-                        Collect coins, avoid traps, and try to beat your
-                        personal best.
-                    </p>
-
-                    <a href="coin-rush.html" class="button button-secondary">
-                        Coming soon
-                    </a>
+                    <p>Collect coins, avoid traps, and try to beat your personal best.</p>
+                    <span class="coming-soon">COMING SOON</span>
                 </article>
-
             </div>
-
         </section>
 
-
-        <!-- About -->
-        <section id="about" class="section about-section">
-
+        <!-- ABOUT -->
+        <section id="about" class="section-container about-section">
             <p class="eyebrow">ABOUT PLAYSTATE</p>
-
             <h2>Made for people who love games.</h2>
-
-            <p>
-                PLAYSTATE is a gaming website built to help players
-                discover games, explore different genres, and enjoy
-                original mini-games in one place.
-            </p>
-
+            <p>PLAYSTATE is a gaming website built to help players discover games, explore gaming stories, and enjoy original mini-games in one place.</p>
         </section>
 
     </main>
 
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="section-container footer-content">
+            <a href="#home" class="logo">PLAYSTATE<span>.</span></a>
+            <p>A gaming project made for fun.</p>
+            <a href="#home" class="text-link">Back to top ↑</a>
+        </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <a href="#home" class="logo">PLAYSTATE<span>.</span></a>
-
-        <p>A gaming project made for fun.</p>
-
-        <p>&copy; 2026 PLAYSTATE. All rights reserved.</p>
+        <div class="section-container footer-bottom">
+            <p>&copy; 2026 PLAYSTATE. School project.</p>
+            <p>Made with creativity and a love for games.</p>
+        </div>
     </footer>
 
 </body>
