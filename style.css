@@ -632,3 +632,113 @@ button:focus-visible {
         scroll-behavior: auto !important;
     }
 }
+
+
+/* =========================================================
+   JOURNAL: expandable articles
+   ========================================================= */
+
+/* Cards keep their own height, so opening one doesn't stretch its neighbours */
+.journal-grid {
+    align-items: start;
+}
+
+.journal-card {
+    cursor: pointer;
+}
+
+.journal-card.open {
+    border-color: var(--magenta);
+    cursor: default;
+}
+
+.journal-card.open:hover {
+    transform: none; /* no jumping while you read */
+}
+
+/* The "Read article +" button */
+.journal-toggle,
+.article-close {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.toggle-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.3rem;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* The hidden article text (smooth open / close) */
+.article-body {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+}
+
+.article-body.open {
+    grid-template-rows: 1fr;
+}
+
+.article-body-inner {
+    overflow: hidden;
+    visibility: hidden;          /* closed text can't be tabbed into */
+    transition: visibility 0.35s;
+}
+
+.article-body.open .article-body-inner {
+    visibility: visible;
+}
+
+.article-text {
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+}
+
+.article-text h4 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--magenta);
+    margin: 1.4rem 0 0.5rem;
+}
+
+.article-text ul {
+    margin: 0 0 1rem;
+}
+
+.article-text li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-muted);
+}
+
+.article-text li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--magenta);
+}
+
+.article-text li strong {
+    color: var(--text);
+}
+
+.article-close {
+    margin-top: 0.5rem;
+}

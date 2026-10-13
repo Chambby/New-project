@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,12 +131,12 @@
                     <div>
                         <p class="eyebrow">THE PLAYSTATE JOURNAL</p>
                         <h2>CHECKPOINT<span>.</span></h2>
-                        <p class="section-description">Stories, discoveries, and everything gaming.</p>
+                        <p class="section-description">Stories, discoveries, and everything gaming. Click an article to read it.</p>
                     </div>
                     <div class="journal-mark">C.</div>
                 </div>
 
-                <!-- FEATURED ARTICLE -->
+                <!-- FEATURED ARTICLE (opens article 1 below) -->
                 <article class="journal-featured">
                     <div class="featured-article-art">
                         <span class="art-small-label">FEATURED STORY</span>
@@ -148,7 +147,7 @@
                         <p class="game-category">GAME DISCOVERY · 3 MIN READ</p>
                         <h3>5 Indie Games Worth Discovering</h3>
                         <p>Indie games prove that you don't need a huge studio to create something unforgettable. Discover creative worlds, memorable stories, and unique gameplay experiences.</p>
-                        <a href="#article-1" class="text-link">Read article ↓</a>
+                        <a href="#article-1" class="text-link" data-open-article="article-1">Read article ↓</a>
                     </div>
                 </article>
 
@@ -162,7 +161,35 @@
                             <h3>5 Indie Games Worth Discovering</h3>
                             <p>Games like Stardew Valley, Celeste, and Hollow Knight show how smaller studios can create unforgettable experiences.</p>
                             <p class="article-note">Sometimes, the best adventures come from the smallest studios.</p>
-                            <a href="#article-1" class="text-link">Read article ↗</a>
+
+                            <button type="button" class="text-link journal-toggle" aria-expanded="false" aria-controls="article-1-body">
+                                <span class="toggle-label">Read article</span> <span class="toggle-icon" aria-hidden="true">+</span>
+                            </button>
+
+                            <div class="article-body" id="article-1-body">
+                                <div class="article-body-inner">
+                                    <div class="article-text">
+                                        <p>Big-budget games get most of the attention, but some of the most loved games of the last decade were made by tiny teams, and sometimes by a single person. Indie games can take risks that huge studios avoid, which is why they often feel so fresh.</p>
+
+                                        <h4>Our five picks</h4>
+                                        <ul>
+                                            <li><strong>Stardew Valley:</strong> You inherit a run-down farm, grow crops, and slowly rebuild the town. It was made mostly by one developer, which makes it even more impressive.</li>
+                                            <li><strong>Celeste:</strong> A tough platformer about climbing a mountain. An assist mode lets you adjust the difficulty so more people can reach the top.</li>
+                                            <li><strong>Hollow Knight:</strong> A huge, hand-drawn underground kingdom with almost no hand-holding. Getting lost is part of the fun.</li>
+                                            <li><strong>Undertale:</strong> A role-playing game where you can try to avoid fighting. Your choices change how the story ends.</li>
+                                            <li><strong>Hades:</strong> Every time you fall you start over, but the story keeps moving forward, so losing never feels like wasted time.</li>
+                                        </ul>
+
+                                        <h4>Why indie games stand out</h4>
+                                        <p>Small teams can try odd ideas, unusual art styles, and quiet stories that a big publisher might consider too risky. When one of those ideas works, players remember it for years.</p>
+
+                                        <h4>Where to start</h4>
+                                        <p>If you want something calm, try Stardew Valley. If you like a challenge, try Celeste. If you want to explore, pick Hollow Knight. And if you ever make your own game one day, remember that every one of these started as a single idea.</p>
+
+                                        <button type="button" class="text-link article-close">Close article ↑</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
@@ -174,7 +201,32 @@
                             <h3>From Arcade Machines to Modern Gaming</h3>
                             <p>Gaming has evolved from arcade machines and early consoles to massive online worlds and realistic virtual experiences.</p>
                             <p class="article-note">The technology changes, but the fun remains.</p>
-                            <a href="#article-2" class="text-link">Read article ↗</a>
+
+                            <button type="button" class="text-link journal-toggle" aria-expanded="false" aria-controls="article-2-body">
+                                <span class="toggle-label">Read article</span> <span class="toggle-icon" aria-hidden="true">+</span>
+                            </button>
+
+                            <div class="article-body" id="article-2-body">
+                                <div class="article-body-inner">
+                                    <div class="article-text">
+                                        <p>Not so long ago, playing a video game meant going somewhere. You needed coins in your pocket and a spot in the line at the arcade. Today, a game can fit in your pocket, and millions of people can play the same world at the same time.</p>
+
+                                        <h4>A quick timeline</h4>
+                                        <ul>
+                                            <li><strong>1970s:</strong> Simple games like Pong and Space Invaders fill arcades. A few moving shapes on a screen were enough to draw a crowd.</li>
+                                            <li><strong>1980s:</strong> Home consoles bring games into the living room, and characters like Mario become famous around the world.</li>
+                                            <li><strong>1990s:</strong> Games move from flat 2D pictures to 3D worlds, and discs replace cartridges.</li>
+                                            <li><strong>2000s:</strong> Online play lets friends compete and cooperate from different homes, and later different countries.</li>
+                                            <li><strong>Today:</strong> Phones, cloud streaming, and virtual reality mean you can play almost anywhere.</li>
+                                        </ul>
+
+                                        <h4>What never changed</h4>
+                                        <p>Graphics got sharper and controllers got more buttons, but the core idea is the same as in the first arcade: a clear goal, a challenge, and the satisfaction of getting better. That's why a simple old game can still be fun today.</p>
+
+                                        <button type="button" class="text-link article-close">Close article ↑</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
@@ -186,7 +238,33 @@
                             <h3>Why Are Cozy Games So Popular?</h3>
                             <p>Farming, decorating, and exploring peaceful worlds offer a relaxing alternative to competitive games.</p>
                             <p class="article-note">Sometimes, watering virtual plants is the perfect adventure.</p>
-                            <a href="#article-3" class="text-link">Read article ↗</a>
+
+                            <button type="button" class="text-link journal-toggle" aria-expanded="false" aria-controls="article-3-body">
+                                <span class="toggle-label">Read article</span> <span class="toggle-icon" aria-hidden="true">+</span>
+                            </button>
+
+                            <div class="article-body" id="article-3-body">
+                                <div class="article-body-inner">
+                                    <div class="article-text">
+                                        <p>After a long day, not everyone wants to fight bosses or climb a ranked ladder. Cozy games are built for the opposite mood. There's no timer chasing you, no one to lose to, and nothing you can really get wrong.</p>
+
+                                        <h4>What makes a game cozy?</h4>
+                                        <ul>
+                                            <li><strong>Low pressure:</strong> Failing is rare, and mistakes are easy to fix.</li>
+                                            <li><strong>Gentle routines:</strong> Water the plants, talk to a neighbour, check the shop. Small daily tasks feel calming.</li>
+                                            <li><strong>Creativity:</strong> Decorating a room or designing a garden lets you make the space your own.</li>
+                                            <li><strong>Soft style:</strong> Warm colours, relaxing music, and friendly characters.</li>
+                                        </ul>
+
+                                        <h4>Why now?</h4>
+                                        <p>Life can be busy and stressful, so many players look for a game that helps them slow down. Cozy games also welcome people who don't think of themselves as "gamers", because there's no skill barrier to get started.</p>
+
+                                        <p>Games like Stardew Valley and Animal Crossing helped prove that a peaceful game can be a big hit. Not every game has to be a fight to be exciting.</p>
+
+                                        <button type="button" class="text-link article-close">Close article ↑</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
@@ -198,7 +276,33 @@
                             <h3>How Video Games Bring People Together</h3>
                             <p>Multiplayer games help friends cooperate, compete, and create memories, even when they live far apart.</p>
                             <p class="article-note">Sometimes, the best part is who you play with.</p>
-                            <a href="#article-4" class="text-link">Read article ↗</a>
+
+                            <button type="button" class="text-link journal-toggle" aria-expanded="false" aria-controls="article-4-body">
+                                <span class="toggle-label">Read article</span> <span class="toggle-icon" aria-hidden="true">+</span>
+                            </button>
+
+                            <div class="article-body" id="article-4-body">
+                                <div class="article-body-inner">
+                                    <div class="article-text">
+                                        <p>Ask a group of players about their best gaming memory, and the story is rarely about the graphics. It's about the friend who saved the whole team at the last second, or the building project that took a whole weekend and ended in laughter.</p>
+
+                                        <h4>Different ways to play together</h4>
+                                        <ul>
+                                            <li><strong>Couch co-op:</strong> Two or more controllers, one screen, and plenty of friendly shouting.</li>
+                                            <li><strong>Online with friends:</strong> Voice chat turns a game into a hangout, even when everyone lives in a different city.</li>
+                                            <li><strong>Big communities:</strong> Fans share tips, make guides, build mods, and organise events for their favourite games.</li>
+                                        </ul>
+
+                                        <h4>Teamwork without realising it</h4>
+                                        <p>Cooperative games teach useful skills in a fun way. You learn to communicate clearly, split up jobs, and keep calm when a plan falls apart. Even competitive games need teamwork if you want to win.</p>
+
+                                        <h4>A few friendly habits</h4>
+                                        <p>Good communities share some simple rules: be kind to new players, celebrate wins together, and remember it's only a game. A group that follows those rules is one people want to come back to.</p>
+
+                                        <button type="button" class="text-link article-close">Close article ↑</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
@@ -210,7 +314,35 @@
                             <h3>How Are Video Games Actually Made?</h3>
                             <p>Game development combines coding, art, music, storytelling, and lots of testing to bring virtual worlds to life.</p>
                             <p class="article-note">Every game starts with an idea and a lot of testing.</p>
-                            <a href="#article-5" class="text-link">Read article ↗</a>
+
+                            <button type="button" class="text-link journal-toggle" aria-expanded="false" aria-controls="article-5-body">
+                                <span class="toggle-label">Read article</span> <span class="toggle-icon" aria-hidden="true">+</span>
+                            </button>
+
+                            <div class="article-body" id="article-5-body">
+                                <div class="article-body-inner">
+                                    <div class="article-text">
+                                        <p>Behind every game you play is a team of people turning an idea into something you can control with your hands. It takes many different skills working together.</p>
+
+                                        <h4>Who builds a game?</h4>
+                                        <ul>
+                                            <li><strong>Programmers</strong> write the code that makes everything move and react.</li>
+                                            <li><strong>Artists and animators</strong> create the characters, worlds, and effects.</li>
+                                            <li><strong>Designers</strong> decide the rules and make sure the game is fun and fair.</li>
+                                            <li><strong>Composers and sound designers</strong> add music and sound effects.</li>
+                                            <li><strong>Testers</strong> play the game again and again to find bugs.</li>
+                                        </ul>
+
+                                        <h4>From idea to release</h4>
+                                        <p>Most games start as a rough prototype: a small, ugly version that only tests one idea. If that idea is fun, the team builds on it. Along the way they run playtests, watch how real people play, and change anything that feels confusing or frustrating.</p>
+
+                                        <h4>Want to try it yourself?</h4>
+                                        <p>Free tools called game engines, like Godot, make it possible to start making games at home. A good first project is something small, like a simple dodging game. Finish something tiny first, then build bigger.</p>
+
+                                        <button type="button" class="text-link article-close">Close article ↑</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
@@ -278,5 +410,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
