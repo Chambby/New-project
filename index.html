@@ -67,20 +67,14 @@
             </div>
 
             <div class="game-filters">
-                <div class="filter-field">
-                    <label for="game-search">Search games</label>
-                    <input type="search" id="game-search" placeholder="Search for a game...">
-                </div>
+                <div class="genre-picker">
+                    <button type="button" id="genre-button" class="genre-button" aria-expanded="false" aria-controls="genre-box">
+                        <span class="genre-button-label">Select your genre</span>
+                        <span class="genre-button-arrow" aria-hidden="true">▾</span>
+                    </button>
 
-                <div class="filter-field">
-                    <label for="genre-filter">Filter by genre</label>
-                    <select id="genre-filter">
-                        <option value="all">All genres</option>
-                        <option value="action">Action</option>
-                        <option value="adventure">Adventure</option>
-                        <option value="indie">Indie</option>
-                        <option value="survival">Survival</option>
-                    </select>
+                    <!-- The genres and games are built by script.js -->
+                    <div class="genre-box" id="genre-box" hidden></div>
                 </div>
             </div>
 
