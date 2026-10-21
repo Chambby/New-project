@@ -9,26 +9,28 @@
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- NAVIGATION --> 
+    <!-- the navigation bar -->
     <header class="site-header">
         <nav class="navbar">
             <a href="#home" class="logo">PLAYSTATE<span>.</span></a>
 
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#games">Games</a></li>
+                <li><a href="#games">The Library</a></li>
                 <li><a href="#journal">Journal</a></li>
                 <li><a href="#arcade">Mini-games</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
 
-            <a href="#arcade" class="nav-button">Play now</a>
+            <button type="button" class="nav-button" id="auth-open">Log in</button>
         </nav>
     </header>
 
     <main>
 
         <!-- HOMEPAGE -->
+
         <section id="home" class="hero section-container">
             <div class="hero-content">
                 <p class="eyebrow">YOUR NEXT OBSESSION STARTS HERE</p>
@@ -39,8 +41,9 @@
                     read about gaming, and play mini-games.
                 </p>
 
+    <!-- navigation buttons -->
                 <div class="hero-buttons">
-                    <a href="#games" class="button button-primary">Explore games</a>
+                    <a href="#games" class="button button-primary">Explore The Library</a>
                     <a href="#arcade" class="button button-secondary">Play mini-games</a>
                 </div>
             </div>
@@ -57,11 +60,18 @@
         </section>
 
         <!-- GAME LIBRARY -->
+         
+    <!-- the game library section containing the game describtions -->
         <section id="games" class="section-container content-section">
             <div class="section-heading">
                 <div>
                     <p class="eyebrow">THE LIBRARY</p>
-                    <h2>Find your game.</h2>
+                    <div class="heading-row">
+                        <h2>Find your game.</h2>
+                        <button type="button" id="dice-button" class="dice-button" aria-label="Roll the dice to pick a random game">
+                            <span class="dice-scene"><span class="dice" id="dice" aria-hidden="true"></span></span>
+                        </button>
+                    </div>
                     <p class="section-description">From massive adventures to creative worlds.</p>
                 </div>
             </div>
@@ -90,7 +100,7 @@
                         <a href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer" class="text-link">Discover game ↗</a>
                     </div>
                 </article>
-
+                                                           <!-- Need to figure out what article means-->
                 <article class="game-card" data-genre="action">
                     <div class="game-image game-fortnite">
                         <span class="image-label">ACTION</span>
@@ -118,6 +128,7 @@
         </section>
 
         <!-- CHECKPOINT GAMING JOURNAL -->
+         <!-- the articles -->
         <section id="journal" class="journal-section">
             <div class="section-container">
 
@@ -360,7 +371,7 @@
                     <p class="game-category">SURVIVAL · 60 SECONDS</p>
                     <h3>Survive for 60 Seconds</h3>
                     <p>Dodge obstacles, stay alive, and see if you can survive the full minute.</p>
-                    <a href="survive.html" class="button button-primary">Play game →</a>
+                    <button type="button" class="button button-primary" data-play="survive">Play game →</button>
                 </article>
 
                 <article class="minigame-card">
@@ -368,15 +379,7 @@
                     <p class="game-category">PUZZLE · MEMORY</p>
                     <h3>Memory Match</h3>
                     <p>Find matching pairs and test how good your memory really is.</p>
-                    <span class="coming-soon">COMING SOON</span>
-                </article>
-
-                <article class="minigame-card">
-                    <div class="minigame-icon">03</div>
-                    <p class="game-category">ARCADE · HIGH SCORE</p>
-                    <h3>Coin Rush</h3>
-                    <p>Collect coins, avoid traps, and try to beat your personal best.</p>
-                    <span class="coming-soon">COMING SOON</span>
+                    <button type="button" class="button button-primary" data-play="memory">Play game →</button>
                 </article>
             </div>
         </section>
@@ -403,6 +406,87 @@
             <p>Made with creativity and a love for games.</p>
         </div>
     </footer>
+
+    <!-- RANDOM GAME POP-UP (opened by the dice) -->
+    <div class="game-modal" id="game-modal" hidden>
+        <div class="game-modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button type="button" class="modal-close" id="modal-close" aria-label="Close">✕</button>
+
+            <div class="modal-banner">
+                <span class="modal-eyebrow">YOUR RANDOM PICK</span>
+                <span class="modal-genre" id="modal-genre"></span>
+            </div>
+
+            <div class="modal-body">
+                <h3 id="modal-title"></h3>
+
+                <dl class="game-facts">
+                    <dt>STUDIO</dt><dd id="modal-studio"></dd>
+                    <dt>RELEASED</dt><dd id="modal-year"></dd>
+                    <dt>GENRE</dt><dd id="modal-type"></dd>
+                </dl>
+
+                <h4 class="game-plot-title">The plot</h4>
+                <p class="game-plot" id="modal-plot"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MINI-GAME POP-UP (opened by the "Play game" buttons) -->
+    <div class="arcade-modal" id="arcade-modal" hidden>
+        <div class="arcade-card" role="dialog" aria-modal="true" aria-labelledby="arcade-title">
+            <button type="button" class="modal-close" id="arcade-close" aria-label="Close">✕</button>
+            <h3 id="arcade-title"></h3>
+            <p class="arcade-help" id="arcade-help"></p>
+            <div class="hud" id="arcade-hud"></div>
+            <div id="arcade-stage"></div>
+        </div>
+    </div>
+
+    <!-- LOGIN / SIGN UP POP-UP (opened by the button in the navigation bar) -->
+    <div class="game-modal" id="auth-modal" hidden>
+        <div class="game-modal-card auth-card" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+            <button type="button" class="modal-close" id="auth-close" aria-label="Close">✕</button>
+
+            <div class="auth-body">
+
+                <!-- shown when nobody is logged in -->
+                <div id="auth-guest">
+                    <h3 id="auth-title">Welcome to PLAYSTATE</h3>
+
+                    <div class="auth-tabs">
+                        <button type="button" class="auth-tab active" data-tab="login">Log in</button>
+                        <button type="button" class="auth-tab" data-tab="signup">Sign up</button>
+                    </div>
+
+                    <form id="auth-form" novalidate>
+                        <label class="auth-field auth-signup-only" hidden>Username
+                            <input type="text" id="auth-username" autocomplete="username">
+                        </label>
+                        <label class="auth-field">Email
+                            <input type="email" id="auth-email" autocomplete="email">
+                        </label>
+                        <label class="auth-field">Password
+                            <input type="password" id="auth-password" autocomplete="current-password">
+                        </label>
+
+                        <p class="auth-message" id="auth-message" role="alert"></p>
+                        <button type="submit" class="button button-primary auth-submit" id="auth-submit">Log in</button>
+                    </form>
+
+                    <p class="auth-note">Demo only: accounts are saved in this browser, nowhere else.</p>
+                </div>
+
+                <!-- shown after logging in -->
+                <div id="auth-loggedin" hidden>
+                    <h3>Hi, <span id="auth-name"></span>!</h3>
+                    <p class="auth-note">You are logged in. Welcome to PLAYSTATE.</p>
+                    <button type="button" class="button button-primary auth-submit" id="auth-logout">Log out</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
